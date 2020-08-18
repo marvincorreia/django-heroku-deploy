@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore editor project directories
+.idea/
+.vscode/
+
+#Environments
+#.env
+
+# static files
+staticfiles/
