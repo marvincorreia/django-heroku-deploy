@@ -2,20 +2,49 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>{% block title %}{% endblock %}</title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'jornal/assets/plugins/bootstrap/css/bootstrap.css' %}">
-    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'jornal/assets/css/carousel.css' %}">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
-{% block content %}{% endblock %}
+
+{% include 'jornal/includes/header.html' %}
+
+<main role="main">
+    {% block content %}{% endblock %}
+    {% include 'jornal/includes/footer.html' %}
+</main>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="{% static 'jornal/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 <script src="{% static 'jornal/assets/plugins/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'jornal/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+{% block extra_js %}{% endblock %}
 
 </body>
 </html>

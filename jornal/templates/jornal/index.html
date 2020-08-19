@@ -1,9 +1,10 @@
 {% extends 'jornal/base.html' %}
 {% load static %}
 
-{% block title %}Feed de notícias{% endblock %}
+{% block title %}django app deploy{% endblock %}
 
 {% block content %}
+
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -12,44 +13,38 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-                    <rect width="100%" height="100%" fill="#777"/>
-                </svg>
+                <img src="{% static 'jornal/assets/images/django-faster.jpg' %}"
+                     alt="django">
                 <div class="container">
-                    <div class="carousel-caption text-left">
-                        <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    <div class="container">
+                        <div class="carousel-caption text-left shadow-none p-3 rounded"
+                             style="background-color: rgba(0,0,0,.4)">
+                            <h1>Django web framework</h1>
+                            <p>The web framework for perfectionists with deadlines.</p>
+                            <p>Django makes it easier to build better Web apps more quickly and with less code.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-                    <rect width="100%" height="100%" fill="#777"/>
-                </svg>
+                <img class="d-block w-100" src="{% static 'jornal/assets/images/heroku.png' %}" alt="heroku">
                 <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <div class="carousel-caption text-left shadow-none p-3 rounded"
+                         style="background-color: rgba(0,0,0,.4)">
+                        <h1>Heroku: Cloud</h1>
+                        <h1>Application Platform</h1>
+                        <p>Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate
+                            applications entirely in the cloud.</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-                    <rect width="100%" height="100%" fill="#777"/>
-                </svg>
+                <img class="d-block w-100" src="{% static 'jornal/assets/images/git.jpg' %}" alt="...">
                 <div class="container">
                     <div class="carousel-caption text-right">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                            gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        <h1>git --distributed-is-the-new-centralized</h1>
+                        <p>Distributed version control system designed to handle everything from small to very large
+                            projects</p>
                     </div>
                 </div>
             </div>
@@ -63,4 +58,54 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img width="280" height="280" src="{% static 'jornal/assets/images/django.jpg' %}"
+                     class="img-fluid rounded-pill" alt="django">
+                <h2>django</h2>
+                <p>The web framework for perfectionists with deadlines. Django makes it easier to build better Web apps
+                    more quickly and with less code.</p>
+                <p><a class="btn btn btn-primary" href="https://www.djangoproject.com/" role="button">See more</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img width="300" height="300" src="{% static 'jornal/assets/images/heroku.png' %}"
+                     class="img-fluid rounded-pill" alt="heroku">
+                <h2>Heroku</h2>
+                <p>Heroku is a cloud platform as a service (PaaS) supporting several programming languages. One of the
+                    first cloud platforms, Heroku has been in development since June 2007, when it supported only the
+                    Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go</p>
+                <p><a class="btn btn btn-primary" href="https://www.heroku.com/" role="button">See more</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img width="250" height="250" src="{% static 'jornal/assets/images/git.jpg' %}"
+                     class="img-fluid rounded-pill" alt="git">
+                <h2>git</h2>
+                <p>Git is a free and open source distributed version control system designed to handle everything from
+                    small to very large projects with speed and efficiency.</p>
+                <p><a class="btn btn btn-primary" href="https://git-scm.com/" role="button">See more</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+    </div>
+
+    <div class="row align-content-center">
+        <div class="col-sm-12 col-md-8 col-lg-4 offset-sm-0 offset-md-2 offset-lg-4">
+            <div class="container embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item"
+                        src="https://player.vimeo.com/video/147784643?api=1&byline=0&title=0&portrait=0&frameborder=0&player_id=python-hello-world&autoplay=1&loop=1"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr class="featurette-divider">
+    </div>
+
 {% endblock %}
